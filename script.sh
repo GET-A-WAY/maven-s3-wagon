@@ -26,7 +26,7 @@ fi
 
 # full jar name prefix
 #TITLE=${ARTIFACT}-${VERSION}-${BULD}
-TITLE=${ARTIFACT}-${VERSION}
+TITLE=${ARTIFACT}-${VERSION}-SNAPSHOT
 
 # report artifact full name
 echo "TITLE=$TITLE"
@@ -36,7 +36,7 @@ cp pom.xml pom-original.xml
 
 # use private release version
 #sed -i "s|-SNAPSHOT|-${BULD}|"  pom.xml
-sed -i '' "s|-SNAPSHOT||"  pom.xml
+#sed -i '' "s|-SNAPSHOT||"  pom.xml
 
 # run clean build
 mvn \
