@@ -315,9 +315,13 @@ public class S3Wagon extends AbstractWagon implements RequestFactory {
 	}
 
 	/**
+	 * 
 	 * Normalize the key to our S3 object:<br>
-	 * Convert <code>./css/style.css</code> into <code>/css/style.css</code><br>
-	 * Convert <code>/foo/bar/../../css/style.css<code> into <code>/css/style.css</code><br>
+	 * Convert <code>./css/style.css</code> into <code>/css/style.css</code><br/>
+	 * Convert <code>/foo/bar/../../css/style.css<code> into <code>/css/style.css</code><br/>
+	 *
+	 * @param key
+	 * @return
 	 */
 	protected String getCanonicalKey(String key) {
 		// release/./css/style.css
