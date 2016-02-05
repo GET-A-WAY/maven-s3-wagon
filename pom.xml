@@ -99,6 +99,7 @@
 							<nocomment>true</nocomment>
 							<nohelp>true</nohelp>
 							<additionalparam>-Xdoclint:none</additionalparam>
+							<failOnError>false</failOnError>
 						</configuration>
 						<executions>
 							<execution>
