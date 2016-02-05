@@ -147,6 +147,7 @@
 					<useReleaseProfile>false</useReleaseProfile>
 					<releaseProfiles>release</releaseProfiles>
 					<goals>deploy</goals>
+					<mavenHome>/usr/local/Cellar/maven/3.3.9/libexec</mavenHome>
 				</configuration>
 			</plugin>
 			<plugin>
