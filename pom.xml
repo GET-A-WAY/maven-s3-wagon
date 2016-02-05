@@ -98,6 +98,7 @@
 							<notree>true</notree>
 							<nocomment>true</nocomment>
 							<nohelp>true</nohelp>
+							<additionalparam>-Xdoclint:none</additionalparam>
 						</configuration>
 						<executions>
 							<execution>
