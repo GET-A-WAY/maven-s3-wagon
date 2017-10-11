@@ -15,19 +15,18 @@
  */
 package org.kuali.maven.wagon.auth;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.amazonaws.auth.profile.ProfileCredentialsProvider;
-import org.apache.maven.wagon.authentication.AuthenticationInfo;
-
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSCredentialsProviderChain;
+import com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper;
 import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
-import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.auth.SystemPropertiesCredentialsProvider;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.google.common.base.Optional;
+import org.apache.maven.wagon.authentication.AuthenticationInfo;
 import org.apache.maven.wagon.repository.Repository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This chain searches for AWS credentials in system properties
