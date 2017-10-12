@@ -8,11 +8,6 @@
 	and limitations under the License. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
 	<groupId>co.axiomzen.maven.wagons</groupId>
 	<artifactId>maven-s3-wagon</artifactId>
 	<version>1.2.7-SNAPSHOT</version>
@@ -107,20 +102,6 @@
 								<id>attach-javadocs</id>
 								<goals>
 									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.6</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
 								</goals>
 							</execution>
 						</executions>
@@ -270,23 +251,4 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 	</dependencies>
-	<scm>
-		<connection>scm:${project.scm.vendor}:git@github.com:axiomzen/maven-s3-wagon.git</connection>
-		<developerConnection>scm:${project.scm.vendor}:git@github.com:axiomzen/maven-s3-wagon.git</developerConnection>
-		<url>https://github.com/axiomzen/maven-s3-wagon</url>
-		<tag>maven-s3-wagon-1.2.4</tag>
-	</scm>
-	<distributionManagement>
-		<!-- Repository for snapshots -->
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<!-- Repository for releases -->
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
-
 </project>
